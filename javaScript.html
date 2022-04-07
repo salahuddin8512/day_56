@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="container">
+
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Enter Height</td>
+                <td><input type="number" id="height"/></td>
+            </tr>
+            <tr>
+                <td>Enter Width</td>
+                <td><input type="number" id="width"/></td>
+            </tr>
+            <tr>
+                <td>Enter Background Color</td>
+                <td><input type="color" id="backgroundColor"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" id="btn">Create New DIV</button></td>
+            </tr>
+        </table>
+
+    </div>
+    <script>
+        document.write('<h1>Hello JavaScript</h1>');
+
+        // var name='BITM';
+        // document.write(name);
+
+        // var firstName='BITM';
+        // var secondName='Basis';
+        // document.write(firstName+' '+secondName);
+
+        // var x=10;
+        // var y=30;
+        // var z=x+y;
+        // document.write(x < y);
+
+
+        // if (x < y)
+        // {
+        //     document.write('Hello World');
+        // }
+        //
+
+        // for (i=1; i<=3; i++)
+        // {
+        //     document.write('Hello WORLD.<br/>');
+        // }
+
+        // var data = [10, 20, 30, 'BITM', 'Basis', 'SEIP', ture, 100.200];
+        // for (key in data)
+        //
+        // {
+        //     document.write(data[key] + ' ');
+        // }
+
+        var student = [
+            {
+                'name': 'Salah Uddin',
+                'mobile': '01719738512',
+                'email': 'salah@gmail.com'
+            },
+            {
+                'name': 'Rana',
+                'mobile': '01719738512',
+                'email': 'salah@gmail.com'
+            },
+            {
+                'name': 'Robel',
+                'mobile': '01719738512',
+                'email': 'salah@gmail.com'
+            }
+            ];
+        // document.write(student[1].name);
+        // for(key in student)
+        // {
+        //     document.write(student[key].name+' '+student[key].email+' '+student[key].mobile+'<br/>');
+        //
+        // }
+        // console
+        // console.log(student);
+
+        // function test(x, y)
+        // {
+        //
+        // // var z=x +y;
+        // // document.write(z);
+        // }
+        // test(10,25);
+        // document.write('<br/>============<br/>');
+        // test(1,21);
+        // document.write('<br/>============<br/>');
+        // test(2,6);
+        // document.write('<br/>============<br/>');
+        //
+        //
+        function createDiv(height, width, color) {
+            var div = document.createElement('div');
+            div.style.height = height + 'px';
+            div.style.width = width + 'px';
+            div.style.backgroundColor = color;
+            var containerDiv = document.getElementById('container');
+            containerDiv.append(div);
+        };
+        //
+        //     // var z=x +y;
+        //     // document.write(z);
+        // }
+        // createDiv(100,200, 'red');
+        // document.write('<br/>============<br/>');
+        // createDiv(200,300, 'black');
+        // document.write('<br/>============<br/>');
+        // createDiv(400,250, 'green');
+        // document.write('<br/>============<br/>');
+        var btn=document.getElementById('btn');
+        btn.onclick=function ()
+        {
+            var heigth=document.getElementById('height').value;
+            var width=document.getElementById('width').value;
+            var backgroundColor=document.getElementById('backgroundColor').value;
+        createDiv(heigth, width, backgroundColor);
+        };
+</script>
+</body>
+</html>
